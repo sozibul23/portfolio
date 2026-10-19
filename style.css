@@ -526,6 +526,185 @@ body:not([data-theme="light"]) .cursor-ring.hovered { border-color: var(--accent
   opacity: 0.65;
 }
 
+/* ── CYBER STATUS TICKER ── */
+.cyber-status-bar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: rgba(0, 229, 176, 0.04);
+  border: 1px solid rgba(0, 229, 176, 0.22);
+  border-radius: var(--r-sm);
+  padding: 8px 16px;
+  margin-bottom: 24px;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.cyber-stat-node {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text);
+}
+.cyber-stat-node .node-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 8px var(--green);
+  animation: pulseSec 1.8s infinite;
+}
+
+/* ── INTERACTIVE CYBER TERMINAL CARD ── */
+.cyber-terminal-card {
+  background: #090b10;
+  border: 1px solid rgba(0, 229, 176, 0.28);
+  border-radius: var(--r);
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55), 0 0 24px rgba(0, 229, 176, 0.08);
+  margin-bottom: 28px;
+  position: relative;
+  z-index: 4;
+}
+.terminal-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #11141c;
+  padding: 10px 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: var(--mono);
+  font-size: 11px;
+}
+.terminal-dots {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.t-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.t-red { background: #ff5f56; }
+.t-yellow { background: #ffbd2e; }
+.t-green { background: #27c93f; }
+.terminal-title {
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  font-weight: 500;
+}
+.terminal-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--green);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+.terminal-pulse {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--green);
+  animation: blink 1.4s infinite;
+}
+.terminal-body {
+  padding: 16px 20px;
+  font-family: var(--mono);
+  font-size: 12.5px;
+  line-height: 1.7;
+  max-height: 220px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+.t-line {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  margin-bottom: 4px;
+}
+.t-prompt {
+  color: var(--accent);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.t-cmd {
+  color: #fff;
+  font-weight: 600;
+}
+.t-response {
+  color: var(--muted);
+  margin-bottom: 10px;
+  padding-left: 14px;
+  border-left: 2px solid rgba(139, 109, 255, 0.25);
+  font-size: 12px;
+}
+.t-response.text-green {
+  color: var(--green);
+  border-left-color: var(--green);
+}
+.t-response.text-yellow {
+  color: var(--orange);
+  border-left-color: var(--orange);
+}
+.t-response.text-red {
+  color: var(--red);
+  border-left-color: var(--red);
+}
+.terminal-input-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.35);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  font-family: var(--mono);
+}
+.terminal-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--green);
+  font-family: var(--mono);
+  font-size: 12.5px;
+  font-weight: 500;
+}
+.terminal-input::placeholder {
+  color: var(--faint);
+  font-size: 11px;
+}
+.terminal-chips {
+  display: flex;
+  gap: 8px;
+  padding: 8px 20px 12px;
+  background: rgba(0, 0, 0, 0.35);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.term-chip {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  padding: 3px 10px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border2);
+  color: var(--muted);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+.term-chip:hover {
+  background: rgba(0, 229, 176, 0.12);
+  border-color: var(--green);
+  color: var(--green);
+  transform: translateY(-1px);
+}
+
 /* ── HERO TOP DECK (Say Hello + NOW status + Portrait) ── */
 .hero-deck {
   display: grid;
@@ -1279,14 +1458,64 @@ body.loaded .hero-stats { opacity: 1; transform: none; }
 }
 .security-card:hover { background: var(--surface2); }
 .security-card:hover::before { height: 60px; }
-.sec-card-icon { font-size: 22px; margin-bottom: 12px; }
+.sec-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.sec-card-icon { font-size: 22px; }
+
+/* CVSS Badges */
+.cvss-badge {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+.cvss--critical {
+  background: rgba(255, 68, 68, 0.14);
+  color: #ff5252;
+  border: 1px solid rgba(255, 68, 68, 0.35);
+  box-shadow: 0 0 10px rgba(255, 68, 68, 0.15);
+}
+.cvss--high {
+  background: rgba(255, 140, 66, 0.14);
+  color: var(--orange);
+  border: 1px solid rgba(255, 140, 66, 0.35);
+}
+.cvss--info {
+  background: rgba(0, 229, 176, 0.12);
+  color: var(--green);
+  border: 1px solid rgba(0, 229, 176, 0.35);
+}
+
+.sec-card-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+.vuln-tech-pill {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--faint);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 2px 7px;
+  border-radius: 3px;
+  border: 1px solid var(--border);
+}
+
 .security-card h4 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
 .security-card p { font-size: 13px; color: var(--muted); line-height: 1.6; }
 .sec-badge {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  margin-top: 12px;
   font-family: var(--mono);
   font-size: 10px;
   padding: 3px 9px;
@@ -1296,6 +1525,71 @@ body.loaded .hero-stats { opacity: 1; transform: none; }
 .sec-badge--done   { background: rgba(0,229,176,0.1); color: var(--green); border: 1px solid rgba(0,229,176,0.25); }
 .sec-badge--prog   { background: rgba(255,140,66,0.1); color: var(--orange); border: 1px solid rgba(255,140,66,0.25); }
 .sec-badge--learn  { background: rgba(139,109,255,0.1); color: var(--accent); border: 1px solid rgba(139,109,255,0.25); }
+
+/* Security Tags & Matrix Tags */
+.tag--sec {
+  background: rgba(0, 229, 176, 0.08) !important;
+  color: var(--green) !important;
+  border-color: rgba(0, 229, 176, 0.28) !important;
+}
+.matrix-tag {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: rgba(139, 109, 255, 0.15);
+  color: var(--accent);
+  border: 1px solid rgba(139, 109, 255, 0.3);
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.tool-chip--sec {
+  background: rgba(0, 229, 176, 0.08) !important;
+  border-color: rgba(0, 229, 176, 0.3) !important;
+  color: var(--green) !important;
+}
+
+/* 4-Phase Security Lifecycle */
+.sec-lifecycle-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.sec-phase-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  padding: 16px 18px;
+  position: relative;
+  transition: all 0.25s var(--ease);
+}
+.sec-phase-card:hover {
+  border-color: rgba(0, 229, 176, 0.35);
+  background: var(--surface2);
+  transform: translateY(-2px);
+}
+.phase-step {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--green);
+  display: block;
+  margin-bottom: 6px;
+}
+.sec-phase-card h4 {
+  font-size: 13.5px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+.sec-phase-card p {
+  font-size: 11.5px;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0;
+}
 
 /* Labs table */
 .labs-panel { border: 1px solid var(--border); border-radius: var(--r); overflow: hidden; }
@@ -1512,6 +1806,8 @@ body::after {
   .section { padding: 48px 20px; }
   .hero-name { font-size: clamp(2.8rem, 12vw, 5rem); }
   .security-grid { grid-template-columns: 1fr; }
+  .sec-lifecycle-grid { grid-template-columns: 1fr; }
+  .cyber-status-bar { font-size: 10px; gap: 12px; }
   .skill-item { grid-template-columns: 1fr; gap: 8px; }
   .skill-pct { display: none; }
   .footer { padding: 18px 20px; }

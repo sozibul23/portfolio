@@ -241,19 +241,18 @@ if (canvas) {
 const typewriterEl = $('#typewriter');
 if (typewriterEl) {
   const roles = [
-    'SQA Automation Engineer',
-    'Cyber Security Researcher',
-    'SDET (Playwright & API)',
-    'Web Security & Pen Tester',
-    'PortSwigger Labs Practitioner',
-    'CI/CD Pipeline Architect'
+    'AppSec Engineer & Web Penetration Tester',
+    'PortSwigger Labs Practitioner (BSCP Path)',
+    'DevSecOps & Security Automation SDET',
+    'Offensive Vulnerability Researcher (OWASP Top 10)',
+    'Burp Suite Professional Specialist'
   ];
   let roleIdx = 0;
   let charIdx = 0;
   let isDeleting = false;
-  const typeSpeed = 85;
-  const deleteSpeed = 45;
-  const pauseEnd = 1600;
+  const typeSpeed = 80;
+  const deleteSpeed = 40;
+  const pauseEnd = 1700;
 
   function typeStep() {
     const current = roles[roleIdx];
@@ -280,6 +279,112 @@ if (typewriterEl) {
   }
   setTimeout(typeStep, 600);
 }
+
+// ── Interactive Cyber Terminal Controller ───────────
+const terminalInput  = $('#terminalInput');
+const terminalOutput = $('#terminalOutput');
+const termChips      = $$('.term-chip');
+
+if (terminalInput && terminalOutput) {
+  const commands = {
+    help: () => `
+<div class="text-green" style="margin-bottom:6px">AVAILABLE CYBER COMMANDS:</div>
+• <strong>whoami</strong>   - Security Engineer profile & operational focus<br/>
+• <strong>vulns</strong>    - Researched vulnerability vectors & CVSS 3.1 ratings<br/>
+• <strong>tools</strong>    - Offensive weapon arsenal (Burp Suite Pro, ZAP, Nmap, Python)<br/>
+• <strong>labs</strong>     - PortSwigger Web Security Academy status (BSCP Path)<br/>
+• <strong>cert</strong>     - Offensive security certification roadmap<br/>
+• <strong>matrix</strong>   - DevSecOps & penetration testing proficiency breakdown<br/>
+• <strong>nmap</strong>     - Simulated reconnaissance scan on local target scope<br/>
+• <strong>contact</strong>  - Encrypted communications & direct contact endpoints<br/>
+• <strong>clear</strong>    - Clear terminal history
+`,
+    whoami: () => `Md Sozibul Islam (Sadhin) — Associate SQA & Application Security Engineer at Innovate Solution. Simulating offensive web exploit chains (SQLi, XSS, SSRF, IDOR) to architect impenetrable automated DevSecOps regression pipelines.`,
+    vulns: () => `
+<div class="text-green" style="margin-bottom:6px">VULNERABILITY RESEARCH & EXPLOIT POCs:</div>
+💉 <strong>SQL Injection</strong> [CVSS 9.8 CRITICAL] — UNION data extraction, XML filter bypass, blind time delays.<br/>
+🌐 <strong>Cross-Site Scripting</strong> [CVSS 8.2 HIGH] — Reflected/stored XSS, DOM sinks, WAF filter evasion.<br/>
+📡 <strong>SSRF</strong> [CVSS 8.6 HIGH] — Localhost pivoting (127.0.0.1, 169.254.169.254), IP obfuscation.<br/>
+🔓 <strong>IDOR & Broken Auth</strong> [CVSS 7.5 HIGH] — Horizontal privilege escalation, token tampering.<br/>
+⚡ <strong>File Upload RCE</strong> [CVSS 9.8 CRITICAL] — Polyglot payload execution, MIME type spoofing.<br/>
+🛡️ <strong>Burp Suite Pro</strong> [EXPLOIT SUITE] — Repeater manual crafting, Intruder fuzzing, Collaborator OOB.
+`,
+    tools: () => `[ARSENAL WEAPONS] Burp Suite Professional, OWASP ZAP, Nmap, Wireshark, SQLmap, ffuf, Playwright E2E, REST Assured, Python, Docker, GitHub Actions CI/CD, Allure Reports, Linux CLI.`,
+    labs: () => `[PORTSWIGGER ACADEMY] 18+ verified labs solved (~45% of practitioner track). Documented exploit writeups & Python automation scripts across SQLi, XSS DOM sinks, SSRF filters, and Broken Auth.`,
+    cert: () => `<span class="text-green">&gt; eJPT</span> (eLearnSecurity Junior Pen-tester) ➔ <span class="text-green">&gt; BSCP</span> (Burp Suite Certified Practitioner) ➔ <span class="text-green">&gt; OSCP</span> (OffSec Certified Professional).`,
+    matrix: () => `[DEVSECOPS MATRIX] Pen-Testing: 90% | OWASP Top 10: 92% | Playwright Security Fuzzing: 95% | REST API Sec: 85% | CI/CD DevSecOps: 88% | Python Exploits: 85%.`,
+    nmap: () => `
+Starting Nmap 7.94 ( https://nmap.org ) at 2026-10-19 13:30 BST<br/>
+Nmap scan report for sozibul-secops.local (127.0.0.1)<br/>
+Host is up (0.00012s latency).<br/>
+PORT &nbsp;&nbsp;&nbsp;&nbsp;STATE SERVICE &nbsp;&nbsp;&nbsp;&nbsp;VERSION<br/>
+80/tcp &nbsp;&nbsp;open &nbsp;http &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nginx/1.24 (SSL Redirect)<br/>
+443/tcp &nbsp;open &nbsp;ssl/https &nbsp;&nbsp;TLS 1.3 (Hardened Cipher Suites)<br/>
+8080/tcp open &nbsp;http-proxy &nbsp;Burp Suite Pro Interceptor<br/>
+<span class="text-green">Nmap done: 1 IP address (1 host up) scanned in 0.42 seconds. Defense perimeter active.</span>
+`,
+    contact: () => `Email: <a href="mailto:sozibul23@gmail.com" style="color:var(--green)">sozibul23@gmail.com</a> | LinkedIn: <a href="https://www.linkedin.com/in/md-sozibul-islam/" target="_blank" style="color:var(--accent)">/in/md-sozibul-islam</a> | GitHub: <a href="https://github.com/sozibul23" target="_blank" style="color:var(--accent)">/sozibul23</a> | Dhaka, Bangladesh.`
+  };
+
+  function executeCommand(rawCmd) {
+    const cmd = rawCmd.trim().toLowerCase();
+    if (!cmd) return;
+
+    if (cmd === 'clear') {
+      terminalOutput.innerHTML = '';
+      return;
+    }
+
+    // Add prompt line
+    const cmdLine = document.createElement('div');
+    cmdLine.className = 't-line';
+    cmdLine.innerHTML = `<span class="t-prompt">secops@sozibul23:~$</span> <span class="t-cmd">${escapeHtml(rawCmd.trim())}</span>`;
+    terminalOutput.appendChild(cmdLine);
+
+    // Add response
+    const resLine = document.createElement('div');
+    resLine.className = 't-response';
+
+    if (commands[cmd]) {
+      const result = commands[cmd]();
+      resLine.innerHTML = result;
+    } else {
+      resLine.innerHTML = `<span class="text-red">zsh: command not found: ${escapeHtml(rawCmd.trim())}</span>. Type <strong style="color:var(--green)">help</strong> to view valid commands.`;
+    }
+    terminalOutput.appendChild(resLine);
+
+    // Scroll to bottom
+    terminalOutput.scrollTop = terminalOutput.scrollHeight;
+  }
+
+  function escapeHtml(str) {
+    return str.replace(/[&<>'"]/g, tag => ({
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      "'": '&#39;',
+      '"': '&quot;'
+    }[tag] || tag));
+  }
+
+  terminalInput.addEventListener('keydown', e => {
+    if (e.key === 'Enter') {
+      const val = terminalInput.value;
+      terminalInput.value = '';
+      executeCommand(val);
+    }
+  });
+
+  termChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      const cmd = chip.dataset.cmd;
+      terminalInput.value = cmd;
+      executeCommand(cmd);
+      terminalInput.value = '';
+    });
+  });
+}
+
 
 // ── Interactive Spotlight on Hover ──────────────────
 $$('.security-card, .project-row, .featured-card').forEach(card => {

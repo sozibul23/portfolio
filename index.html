@@ -3,30 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Md Sozibul Islam — SQA Engineer, SDET &amp; Cyber Security</title>
-  <meta name="description" content="Associate SQA Engineer, SDET &amp; Cyber Security Researcher at Innovate Solution. Automating E2E &amp; APIs with Playwright, REST Assured &amp; PortSwigger Web Security. Based in Dhaka, Bangladesh." />
-  <meta property="og:title" content="Md Sozibul Islam — SQA Engineer, SDET &amp; Cyber Security" />
-  <meta property="og:description" content="Associate SQA Engineer, SDET &amp; Cyber Security Researcher. E2E &amp; API Automation, PortSwigger Web Security. Based in Dhaka, Bangladesh." />
+  <title>Md Sozibul Islam — AppSec Engineer &amp; Web Penetration Tester</title>
+  <meta name="description" content="Application Security (AppSec) Engineer &amp; Web Penetration Tester. Bridging enterprise QA Automation &amp; Offensive Security: OWASP Top 10, Burp Suite Pro, PortSwigger Labs, and DevSecOps pipelines. Based in Dhaka, Bangladesh." />
+  <meta property="og:title" content="Md Sozibul Islam — AppSec Engineer &amp; Web Penetration Tester" />
+  <meta property="og:description" content="Application Security Engineer &amp; Web Penetration Tester. OWASP Top 10, Burp Suite Pro, PortSwigger Labs &amp; DevSecOps." />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ── TOP BAR ───────────────────────────────── -->
+  <!-- ── CYBER HUD TOP BAR ──────────────────────── -->
   <div class="top-bar" id="topBar">
-    <span class="top-logo"><em>MSI</em> / sozibul23 <span class="top-badge-sec">QA · Security</span></span>
-    <span class="top-light-caption">THE LIGHT FOLLOWS YOUR CURSOR</span>
+    <span class="top-logo">
+      <span class="terminal-prefix">&gt;</span> <em>MSI</em> / sozibul23 
+      <span class="top-badge-sec"><span class="pulse-cyber-dot"></span> SEC-OPS ONLINE // TLS 1.3</span>
+    </span>
+    <span class="top-light-caption">THE LIGHT FOLLOWS YOUR CURSOR // PORT 443</span>
     <div class="top-pill-actions">
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
         <span class="theme-icon">◐</span>
       </button>
       <div class="pill-divider"></div>
       <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="site-menu">
-        <span class="menu-toggle-label">MENU</span>
+        <span class="menu-toggle-label">TERMINAL MENU</span>
         <span class="menu-plus">+</span>
       </button>
     </div>
@@ -72,31 +75,31 @@
     <div class="rail-item" data-section="work">
       <button class="rail-btn" data-target="work">
         <span class="rail-n">01</span>
-        <span class="rail-label">WORK</span>
-      </button>
-    </div>
-    <div class="rail-item" data-section="skills">
-      <button class="rail-btn" data-target="skills">
-        <span class="rail-n">02</span>
-        <span class="rail-label">SKILLS</span>
+        <span class="rail-label">ARSENAL</span>
       </button>
     </div>
     <div class="rail-item" data-section="security">
       <button class="rail-btn" data-target="security">
+        <span class="rail-n">02</span>
+        <span class="rail-label">VULNS</span>
+      </button>
+    </div>
+    <div class="rail-item" data-section="skills">
+      <button class="rail-btn" data-target="skills">
         <span class="rail-n">03</span>
-        <span class="rail-label">SECURITY</span>
+        <span class="rail-label">MATRIX</span>
       </button>
     </div>
     <div class="rail-item" data-section="about">
       <button class="rail-btn" data-target="about">
         <span class="rail-n">04</span>
-        <span class="rail-label">STORY</span>
+        <span class="rail-label">PHILOSOPHY</span>
       </button>
     </div>
     <div class="rail-item" data-section="contact">
       <button class="rail-btn" data-target="contact">
         <span class="rail-n">05</span>
-        <span class="rail-label">CONTACT</span>
+        <span class="rail-label">CONNECT</span>
       </button>
     </div>
   </nav>
@@ -110,21 +113,29 @@
       <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
       <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
 
-      <!-- HERO TOP DECK (Say Hello + NOW status + Portrait) -->
+      <!-- CYBER SECURITY STATUS TICKER -->
+      <div class="cyber-status-bar">
+        <div class="cyber-stat-node"><span class="node-dot"></span> THREAT DEFENSE: ACTIVE</div>
+        <div class="cyber-stat-node">TARGET SCOPE: WEB APPS &amp; REST APIs</div>
+        <div class="cyber-stat-node cyber-stat-node--hide-sm">PORT: 443 // SSL/TLS 1.3</div>
+        <div class="cyber-stat-node">METHODOLOGY: OWASP TOP 10</div>
+      </div>
+
+      <!-- HERO TOP DECK (Say Hello + NOW status + Cyber Portrait) -->
       <div class="hero-deck">
         <!-- Floating Say Hello angled badge -->
         <a href="mailto:sozibul23@gmail.com" class="say-hello-badge" aria-label="Say hello">
-          <span>Say hello ↗</span>
+          <span>&gt; Say hello ↗</span>
         </a>
 
         <!-- NOW status widget with commits & cyber security info -->
         <div class="now-status-card">
           <div class="now-header">
             <span class="now-pulse-dot"></span>
-            <span class="now-tag">NOW</span>
+            <span class="now-tag">SEC-OPS NOW</span>
           </div>
-          <div class="now-headline">Automating E2E &amp; Web Pentesting <span class="now-arrow">↓</span></div>
-          <div class="now-sub">Associate SQA &amp; SDET · PortSwigger Web Security Academy</div>
+          <div class="now-headline">Web Penetration Testing &amp; E2E Automation <span class="now-arrow">↓</span></div>
+          <div class="now-sub">AppSec Engineer · PortSwigger Web Security Academy (BSCP Path)</div>
           <div class="now-activity">
             <span class="commit-tile active"></span>
             <span class="commit-tile active"></span>
@@ -137,7 +148,7 @@
             <span class="commit-tile active"></span>
             <span class="commit-tile current"></span>
             <span class="commit-tile"></span>
-            <span class="commit-meta">ACTIVE LEARNER &amp; CONTRIBUTOR</span>
+            <span class="commit-meta">AUDITING TARGETS &amp; LABS</span>
           </div>
         </div>
 
@@ -153,7 +164,7 @@
                 <span class="cyber-scanline"></span>
                 <div class="cyber-shield-large">🛡️</div>
                 <div class="portrait-caption">MD SOZIBUL ISLAM</div>
-                <div class="portrait-role-tag">SQA · SDET · CYBER SECURITY</div>
+                <div class="portrait-role-tag">APPSEC · PEN-TESTING · SQA</div>
               </div>
             </div>
             <div class="portrait-tape"></div>
@@ -161,10 +172,43 @@
         </div>
       </div>
 
+      <!-- INTERACTIVE CYBER TERMINAL -->
+      <div class="cyber-terminal-card" id="cyberTerminal">
+        <div class="terminal-bar">
+          <div class="terminal-dots">
+            <span class="t-dot t-red"></span>
+            <span class="t-dot t-yellow"></span>
+            <span class="t-dot t-green"></span>
+          </div>
+          <div class="terminal-title">sozibul@secops-terminal: ~/exploits</div>
+          <div class="terminal-status"><span class="terminal-pulse"></span> PORT 443 // ENCRYPTED</div>
+        </div>
+        <div class="terminal-body" id="terminalOutput">
+          <div class="t-line"><span class="t-prompt">secops@sozibul23:~$</span> <span class="t-cmd">whoami</span></div>
+          <div class="t-response">Md Sozibul Islam (Sadhin) — Associate SQA &amp; Application Security Engineer at Innovate Solution. I simulate offensive web attacks to architect impenetrable software defenses.</div>
+          <div class="t-line"><span class="t-prompt">secops@sozibul23:~$</span> <span class="t-cmd">cat target_certifications.txt</span></div>
+          <div class="t-response text-green">&gt; eJPT ➔ BSCP (Burp Suite Certified Practitioner) ➔ OSCP</div>
+        </div>
+        <div class="terminal-input-row">
+          <span class="t-prompt">secops@sozibul23:~$</span>
+          <input type="text" id="terminalInput" class="terminal-input" placeholder="Type a command (try 'help', 'vulns', 'tools', 'labs')..." autocomplete="off" spellcheck="false" />
+        </div>
+        <div class="terminal-chips">
+          <button class="term-chip" data-cmd="help">&gt; help</button>
+          <button class="term-chip" data-cmd="whoami">&gt; whoami</button>
+          <button class="term-chip" data-cmd="vulns">&gt; vulns</button>
+          <button class="term-chip" data-cmd="tools">&gt; tools</button>
+          <button class="term-chip" data-cmd="labs">&gt; labs</button>
+          <button class="term-chip" data-cmd="cert">&gt; cert</button>
+          <button class="term-chip" data-cmd="contact">&gt; contact</button>
+          <button class="term-chip" data-cmd="clear">&gt; clear</button>
+        </div>
+      </div>
+
       <!-- HERO GIGANTIC TYPOGRAPHY -->
       <div class="hero-typography-block">
         <div class="hero-eyebrow-line">
-          ASSOCIATE SQA ENGINEER &amp; SDET — CYBER SECURITY ANALYST — BASED IN DHAKA, BANGLADESH
+          APPLICATION SECURITY (APPSEC) · OFFENSIVE WEB SECURITY · DEVSECOPS — DHAKA, BANGLADESH
         </div>
         <h1 class="hero-giant-name">
           <span class="hero-first-line">Md Sozibul</span>
@@ -176,11 +220,11 @@
       <div class="hero-bottom">
         <div class="hero-desc">
           <div class="hero-role-badge">
-            <span class="role-pill">SQA Engineer</span>
+            <span class="role-pill role-pill--sec"><span class="sec-dot"></span> AppSec Engineer</span>
             <span class="role-pill-sep">/</span>
-            <span class="role-pill">SDET</span>
+            <span class="role-pill">Web Penetration Tester</span>
             <span class="role-pill-sep">/</span>
-            <span class="role-pill role-pill--sec"><span class="sec-dot"></span> Cyber Security</span>
+            <span class="role-pill">SDET &amp; DevSecOps</span>
           </div>
 
           <div class="hero-typewriter-box">
@@ -189,36 +233,36 @@
             <span class="typewriter-cursor">_</span>
           </div>
 
-          <p class="hero-role">Associate SQA Engineer, SDET &amp; Cyber Security Analyst · <a href="https://github.com/sozibul23" target="_blank" rel="noreferrer">Innovate Solution</a></p>
-          <p style="margin-top:8px">Building quality-first software through intelligent test automation &amp; web application security testing. Crafting enterprise E2E frameworks and actively mastering offensive security through PortSwigger Academy.</p>
+          <p class="hero-role">Associate SQA &amp; Application Security Engineer · <a href="https://github.com/sozibul23" target="_blank" rel="noreferrer">Innovate Solution</a></p>
+          <p style="margin-top:8px">Specialized in offensive web security auditing, vulnerability research (OWASP Top 10), and automated DevSecOps pipelines. Bridging the gap between QA automation and penetration testing to ship impenetrable software.</p>
         </div>
         <div class="hero-actions">
-          <a class="btn btn--primary" href="#work">View Work <span class="btn-arrow">↗</span></a>
-          <a class="btn btn--cyber" href="#security"><span class="btn-sec-icon">🛡️</span> Security Labs</a>
+          <a class="btn btn--cyber" href="#security"><span class="btn-sec-icon">🛡️</span> Vulnerability PoCs</a>
+          <a class="btn btn--primary" href="#work">Security Arsenal <span class="btn-arrow">↗</span></a>
           <a class="btn btn--ghost" href="https://github.com/sozibul23" target="_blank" rel="noreferrer">GitHub</a>
         </div>
       </div>
 
       <div class="hero-stats">
         <div class="stat">
-          <span class="stat-n" data-count="2" data-suffix="+">2+</span>
-          <span class="stat-label">Years Experience</span>
+          <span class="stat-n" data-count="18" data-suffix="+">18+</span>
+          <span class="stat-label">PortSwigger Labs Solved</span>
         </div>
         <div class="stat">
           <span class="stat-n" data-count="500" data-suffix="+">500+</span>
-          <span class="stat-label">Test Cases Written</span>
-        </div>
-        <div class="stat">
-          <span class="stat-n" data-count="18" data-suffix="+">18+</span>
-          <span class="stat-label">Security Labs Solved</span>
+          <span class="stat-label">Security &amp; QA Test Cases</span>
         </div>
         <div class="stat">
           <span class="stat-n" data-count="10" data-suffix="+">10+</span>
-          <span class="stat-label">Projects Automated</span>
+          <span class="stat-label">Audited Web Systems</span>
+        </div>
+        <div class="stat">
+          <span class="stat-n" data-count="2" data-suffix="+">2+</span>
+          <span class="stat-label">Years Engineering Experience</span>
         </div>
         <div class="stat">
           <span class="stat-n" data-count="3" data-suffix="">3</span>
-          <span class="stat-label">Frameworks Mastered</span>
+          <span class="stat-label">Core Attack Frameworks</span>
         </div>
       </div>
     </section>
@@ -256,58 +300,59 @@
       </div>
     </div>
 
-    <!-- ════════ 01 · WORK ════════ -->
+    <!-- ════════ 01 · ARSENAL (WORK) ════════ -->
     <section id="work" class="section section--work">
       <div class="section-eyebrow fade-up">
-        <span class="section-n">01</span>
+        <span class="section-n">01 // ARSENAL</span>
         <div class="section-rule"></div>
       </div>
-      <h2 class="section-title fade-up">Selected Work</h2>
-      <p class="section-sub fade-up">Automation frameworks &amp; QA projects</p>
+      <h2 class="section-title fade-up">Security &amp; Automation Arsenal</h2>
+      <p class="section-sub fade-up">Enterprise test frameworks, API security test suites &amp; DevSecOps pipelines</p>
 
-      <!-- Featured -->
+      <!-- Featured Project -->
       <div style="margin-top:48px; margin-bottom:2px">
         <a href="https://github.com/sozibul23/playwright-travel-portal-automation" target="_blank" rel="noreferrer" class="featured-card fade-up" style="display:block">
           <div class="featured-card-body">
-            <div class="featured-badge">⭐ Featured Project</div>
-            <h3 class="featured-title">Travel Portal Automation</h3>
-            <p class="featured-desc">Enterprise-grade E2E QA automation framework for B2B &amp; B2C travel portals. Covers Flights, Hotels, Multi-Suppliers &amp; Dynamic Coupons with parallel execution and full Allure reporting pipeline.</p>
+            <div class="featured-badge">🛡️ SECURITY-HARDENED QA FRAMEWORK</div>
+            <h3 class="featured-title">Travel Portal Automation &amp; Regression Engine</h3>
+            <p class="featured-desc">Enterprise-grade E2E and API automation framework for high-traffic B2B &amp; B2C travel portals. Includes security assertions, session expiration testing, race condition handling in dynamic coupon redemption, and multi-supplier parallel execution with Allure reporting.</p>
             <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <span class="tag tag--sec">OWASP ASVS</span>
               <span class="tag">Playwright</span>
               <span class="tag">TypeScript</span>
-              <span class="tag">Allure</span>
-              <span class="tag">Page Object</span>
-              <span class="tag">CI/CD</span>
+              <span class="tag">Allure Reports</span>
+              <span class="tag">Page Object Model</span>
+              <span class="tag">GitHub Actions CI/CD</span>
             </div>
           </div>
           <div class="featured-footer">
             <div class="featured-tags">
-              <span style="font-family:var(--mono);font-size:11px;color:var(--faint)">JavaScript · 3.8MB · 2026</span>
+              <span style="font-family:var(--mono);font-size:11px;color:var(--faint)">TypeScript · Enterprise Grade · 2026</span>
             </div>
-            <span class="featured-link">View on GitHub <span>↗</span></span>
+            <span class="featured-link">Inspect Codebase <span>↗</span></span>
           </div>
         </a>
       </div>
 
       <!-- Project list -->
       <div class="projects-list">
-        <a href="https://github.com/sozibul23/rokomari-playwright-automation" target="_blank" rel="noreferrer" class="project-row">
+        <a href="https://github.com/sozibul23/parabank_automation" target="_blank" rel="noreferrer" class="project-row">
           <span class="project-index">02</span>
           <div class="project-info">
-            <span class="project-title">Rokomari E2E Automation</span>
+            <span class="project-title">ParaBank Financial API &amp; Security Test Suite</span>
             <div class="project-meta">
-              <span class="tag">Playwright</span><span class="tag">TypeScript</span><span class="tag">POM</span><span class="tag">Data-Driven</span>
+              <span class="tag tag--sec">IDOR Verification</span><span class="tag tag--sec">Broken Auth Logic</span><span class="tag">Playwright</span><span class="tag">REST API</span>
             </div>
           </div>
           <span class="project-arrow">↗</span>
         </a>
 
-        <a href="https://github.com/sozibul23/parabank_automation" target="_blank" rel="noreferrer" class="project-row">
+        <a href="https://github.com/sozibul23/rokomari-playwright-automation" target="_blank" rel="noreferrer" class="project-row">
           <span class="project-index">03</span>
           <div class="project-info">
-            <span class="project-title">ParaBank Online Banking Automation</span>
+            <span class="project-title">Rokomari E2E Security &amp; Functional Suite</span>
             <div class="project-meta">
-              <span class="tag">Playwright</span><span class="tag">TypeScript</span><span class="tag">Banking</span>
+              <span class="tag tag--sec">Session Hijack Check</span><span class="tag">Playwright</span><span class="tag">TypeScript</span><span class="tag">Data-Driven</span>
             </div>
           </div>
           <span class="project-arrow">↗</span>
@@ -316,9 +361,9 @@
         <a href="https://github.com/sozibul23/billetix-automation" target="_blank" rel="noreferrer" class="project-row">
           <span class="project-index">04</span>
           <div class="project-info">
-            <span class="project-title">Billetix Ticket Platform Automation</span>
+            <span class="project-title">Billetix High-Concurrency Ticketing Platform Suite</span>
             <div class="project-meta">
-              <span class="tag">Playwright</span><span class="tag">TypeScript</span><span class="tag">E2E</span>
+              <span class="tag tag--sec">Race Condition Audit</span><span class="tag">Concurrency</span><span class="tag">TypeScript</span><span class="tag">E2E</span>
             </div>
           </div>
           <span class="project-arrow">↗</span>
@@ -327,9 +372,9 @@
         <a href="https://github.com/sozibul23/b2c-sqa-test-cases-suite" target="_blank" rel="noreferrer" class="project-row">
           <span class="project-index">05</span>
           <div class="project-info">
-            <span class="project-title">B2C SQA Test Cases Suite</span>
+            <span class="project-title">B2C SQA Test Cases &amp; Threat Scenarios Suite</span>
             <div class="project-meta">
-              <span class="tag">SQA</span><span class="tag">Test Cases</span><span class="tag">OTA</span><span class="tag">Classifieds</span>
+              <span class="tag tag--sec">100+ Security Test Cases</span><span class="tag">Threat Modeling</span><span class="tag">OTA</span><span class="tag">Payment Flow</span>
             </div>
           </div>
           <span class="project-arrow">↗</span>
@@ -338,7 +383,7 @@
         <a href="https://github.com/sozibul23" target="_blank" rel="noreferrer" class="project-row">
           <span class="project-index">+</span>
           <div class="project-info">
-            <span class="project-title" style="color:var(--muted)">More on GitHub →</span>
+            <span class="project-title" style="color:var(--muted)">More Offensive &amp; Automation Repositories on GitHub →</span>
             <div class="project-meta"><span class="tag">All Repositories</span></div>
           </div>
           <span class="project-arrow">↗</span>
@@ -346,144 +391,127 @@
       </div>
     </section>
 
-    <!-- ════════ 02 · SKILLS ════════ -->
-    <section id="skills" class="section section--skills">
-      <div class="section-eyebrow fade-up">
-        <span class="section-n">02</span>
-        <div class="section-rule"></div>
-      </div>
-      <h2 class="section-title fade-up">Skills &amp; Tools</h2>
-      <p class="section-sub fade-up">Technologies I work with every day</p>
-
-      <div class="skills-layout" style="margin-top:56px">
-        <div class="skills-col">
-          <div class="fade-up">
-            <h3 class="skill-group-title">Test Automation</h3>
-            <ul class="skill-list">
-              <li class="skill-item"><span class="skill-name">Playwright</span><div class="skill-bar"><div class="skill-fill" style="--w:95%"></div></div><span class="skill-pct">95%</span></li>
-              <li class="skill-item"><span class="skill-name">Selenium WebDriver</span><div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div><span class="skill-pct">85%</span></li>
-              <li class="skill-item"><span class="skill-name">REST Assured</span><div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div><span class="skill-pct">80%</span></li>
-              <li class="skill-item"><span class="skill-name">JMeter</span><div class="skill-bar"><div class="skill-fill" style="--w:70%"></div></div><span class="skill-pct">70%</span></li>
-            </ul>
-          </div>
-          <div class="fade-up">
-            <h3 class="skill-group-title">Languages</h3>
-            <ul class="skill-list">
-              <li class="skill-item"><span class="skill-name">TypeScript</span><div class="skill-bar"><div class="skill-fill" style="--w:90%"></div></div><span class="skill-pct">90%</span></li>
-              <li class="skill-item"><span class="skill-name">JavaScript</span><div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div><span class="skill-pct">85%</span></li>
-              <li class="skill-item"><span class="skill-name">Java</span><div class="skill-bar"><div class="skill-fill" style="--w:75%"></div></div><span class="skill-pct">75%</span></li>
-              <li class="skill-item"><span class="skill-name">Python</span><div class="skill-bar"><div class="skill-fill" style="--w:60%"></div></div><span class="skill-pct">60%</span></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="skills-col">
-          <div class="fade-up">
-            <h3 class="skill-group-title">CI/CD &amp; DevOps</h3>
-            <ul class="skill-list">
-              <li class="skill-item"><span class="skill-name">GitHub Actions</span><div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div><span class="skill-pct">85%</span></li>
-              <li class="skill-item"><span class="skill-name">Jenkins</span><div class="skill-bar"><div class="skill-fill" style="--w:75%"></div></div><span class="skill-pct">75%</span></li>
-              <li class="skill-item"><span class="skill-name">Docker</span><div class="skill-bar"><div class="skill-fill" style="--w:65%"></div></div><span class="skill-pct">65%</span></li>
-            </ul>
-          </div>
-          <div class="fade-up">
-            <h3 class="skill-group-title">Tools &amp; Ecosystem</h3>
-            <div class="tools-grid">
-              <span class="tool-chip">Allure Report</span>
-              <span class="tool-chip">Jira</span>
-              <span class="tool-chip">Postman</span>
-              <span class="tool-chip">Burp Suite</span>
-              <span class="tool-chip">Git</span>
-              <span class="tool-chip">VS Code</span>
-              <span class="tool-chip">IntelliJ</span>
-              <span class="tool-chip">TestNG</span>
-              <span class="tool-chip">Mocha</span>
-              <span class="tool-chip">Cucumber</span>
-              <span class="tool-chip">Swagger</span>
-              <span class="tool-chip">Azure DevOps</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ════════ 03 · SECURITY ════════ -->
+    <!-- ════════ 02 · OFFENSIVE SECURITY & VULNERABILITY RESEARCH ════════ -->
     <section id="security" class="section section--security">
       <div class="section-eyebrow fade-up">
-        <span class="section-n">03</span>
+        <span class="section-n">02 // VULNERABILITY RESEARCH</span>
         <div class="section-rule"></div>
       </div>
-      <h2 class="section-title fade-up">Cybersecurity</h2>
-      <p class="section-sub fade-up">Web security learning &amp; offensive security research</p>
+      <h2 class="section-title fade-up">Offensive Security &amp; Exploit Research</h2>
+      <p class="section-sub fade-up">Hands-on web application penetration testing &amp; PortSwigger Academy research</p>
 
       <div class="security-banner fade-up" style="margin-top:48px">
-        <div class="sec-icon">🔐</div>
+        <div class="sec-icon">🛡️</div>
         <div>
-          <div class="sec-title">Web Security &amp; Penetration Testing</div>
-          <p class="sec-text">Alongside QA automation, I actively study offensive web security through <strong>PortSwigger Web Security Academy</strong>. Understanding how attackers think makes me a sharper tester — I integrate security mindset into every automation framework I build, writing tests that actively probe for vulnerabilities.</p>
+          <div class="sec-title">Dual Threat Perspective: Attacker Mindset + Automated Defense</div>
+          <p class="sec-text">I bridge QA automation and offensive security. Understanding how attackers construct SQLi payloads, weaponize XSS DOM sinks, or pivot via SSRF enables me to write bulletproof automated regression tests. My research follows the <strong>90-Day AppSec Accelerator Roadmap</strong> toward the <strong>Burp Suite Certified Practitioner (BSCP)</strong> &amp; <strong>eJPT</strong> certifications.</p>
         </div>
       </div>
 
       <!-- PortSwigger progress -->
       <div class="ps-progress-wrap fade-up">
         <div class="ps-progress-header">
-          <span class="ps-progress-label">PortSwigger Web Academy Progress</span>
-          <span class="ps-progress-status">Active Learner</span>
+          <span class="ps-progress-label">PortSwigger Web Security Academy Progress (BSCP Path)</span>
+          <span class="ps-progress-status"><span class="terminal-pulse"></span> Active Practitioner Track</span>
         </div>
         <div class="ps-progress-track">
           <div class="ps-progress-fill" data-width="45%"></div>
         </div>
         <div class="ps-progress-foot">
-          <span>Completed labs across multiple vulnerability classes</span>
-          <span>~45% complete</span>
+          <span>Target Certification: BSCP (Burp Suite Certified Practitioner) &amp; eJPT</span>
+          <span style="color:var(--green)">18+ Verified Labs Solved (~45%)</span>
         </div>
       </div>
 
-      <!-- Vulnerability cards -->
+      <!-- Vulnerability Cards with CVSS & Technical Vectors -->
       <div class="security-grid">
         <div class="security-card">
-          <div class="sec-card-icon">💉</div>
-          <h4>SQL Injection</h4>
-          <p>Authentication bypass, UNION attacks, blind SQLi, time-based extraction and out-of-band data exfiltration techniques.</p>
-          <span class="sec-badge sec-badge--prog">● In Progress</span>
+          <div class="sec-card-header">
+            <span class="sec-card-icon">💉</span>
+            <span class="cvss-badge cvss--critical">CVSS 9.8 · CRITICAL</span>
+          </div>
+          <h4>SQL Injection (SQLi)</h4>
+          <p>UNION-based data exfiltration, blind conditional extraction, time-based delays, XML entity encoding filter bypasses, and database credential harvesting.</p>
+          <div class="sec-card-foot">
+            <span class="vuln-tech-pill">`' UNION SELECT NULL--`</span>
+            <span class="sec-badge sec-badge--prog">● In Progress</span>
+          </div>
         </div>
+
         <div class="security-card">
-          <div class="sec-card-icon">🌐</div>
-          <h4>Cross-Site Scripting</h4>
-          <p>Reflected, stored, and DOM-based XSS. Filter bypasses, WAF evasion, and exploit delivery chains.</p>
-          <span class="sec-badge sec-badge--prog">● In Progress</span>
+          <div class="sec-card-header">
+            <span class="sec-card-icon">🌐</span>
+            <span class="cvss-badge cvss--high">CVSS 8.2 · HIGH</span>
+          </div>
+          <h4>Cross-Site Scripting (XSS)</h4>
+          <p>Reflected and stored payload injection, DOM-based sink manipulation (`location.search` to `document.write`), HTML attribute breakout, and WAF filter evasion.</p>
+          <div class="sec-card-foot">
+            <span class="vuln-tech-pill">`" onmouseover="...`</span>
+            <span class="sec-badge sec-badge--prog">● In Progress</span>
+          </div>
         </div>
+
         <div class="security-card">
-          <div class="sec-card-icon">🔑</div>
-          <h4>Authentication Attacks</h4>
-          <p>Brute-force, credential stuffing, broken auth logic, MFA bypass and session management vulnerabilities.</p>
-          <span class="sec-badge sec-badge--done">✓ Completed</span>
+          <div class="sec-card-header">
+            <span class="sec-card-icon">📡</span>
+            <span class="cvss-badge cvss--high">CVSS 8.6 · HIGH</span>
+          </div>
+          <h4>Server-Side Request Forgery (SSRF)</h4>
+          <p>Localhost access (`127.0.0.1`), internal API pivoting, cloud metadata extraction (`169.254.169.254`), and blacklist IP obfuscation bypass techniques.</p>
+          <div class="sec-card-foot">
+            <span class="vuln-tech-pill">`2130706433 / 127.1`</span>
+            <span class="sec-badge sec-badge--learn">⟳ Learning</span>
+          </div>
         </div>
+
         <div class="security-card">
-          <div class="sec-card-icon">🕵️</div>
-          <h4>Burp Suite Pro</h4>
-          <p>Active scanning, Intruder automation, Repeater analysis, custom extension usage and intercepting proxies.</p>
-          <span class="sec-badge sec-badge--done">✓ Completed</span>
+          <div class="sec-card-header">
+            <span class="sec-card-icon">🔓</span>
+            <span class="cvss-badge cvss--high">CVSS 7.5 · HIGH</span>
+          </div>
+          <h4>IDOR &amp; Broken Object Level Auth</h4>
+          <p>Insecure direct object reference exploitation, horizontal &amp; vertical privilege escalation, unprotected admin endpoints, and parameter tampering.</p>
+          <div class="sec-card-foot">
+            <span class="vuln-tech-pill">`/download?file=...`</span>
+            <span class="sec-badge sec-badge--learn">⟳ Learning</span>
+          </div>
         </div>
+
         <div class="security-card">
-          <div class="sec-card-icon">🗺️</div>
-          <h4>IDOR &amp; Access Control</h4>
-          <p>Insecure direct object references, horizontal &amp; vertical privilege escalation, CORS misconfigurations.</p>
-          <span class="sec-badge sec-badge--learn">⟳ Learning</span>
+          <div class="sec-card-header">
+            <span class="sec-card-icon">⚡</span>
+            <span class="cvss-badge cvss--critical">CVSS 9.8 · CRITICAL</span>
+          </div>
+          <h4>File Upload Remote Code Execution</h4>
+          <p>Web shell execution via polyglot file uploads, Content-Type MIME spoofing, extension blacklist bypass, and path traversal upload directories.</p>
+          <div class="sec-card-foot">
+            <span class="vuln-tech-pill">`shell.php.jpg`</span>
+            <span class="sec-badge sec-badge--learn">⟳ Learning</span>
+          </div>
         </div>
+
         <div class="security-card">
-          <div class="sec-card-icon">📡</div>
-          <h4>SSRF &amp; XXE</h4>
-          <p>Server-side request forgery for internal network pivoting, XML external entity injection attack vectors.</p>
-          <span class="sec-badge sec-badge--learn">⟳ Learning</span>
+          <div class="sec-card-header">
+            <span class="sec-card-icon">🕵️</span>
+            <span class="cvss-badge cvss--info">CORE SUITE · WEAPON</span>
+          </div>
+          <h4>Burp Suite Professional</h4>
+          <p>Advanced HTTP traffic interception, Intruder custom payload fuzzing, Repeater manual PoC crafting, Match &amp; Replace proxy rules, and Collaborator out-of-band verification.</p>
+          <div class="sec-card-foot">
+            <span class="vuln-tech-pill">Proxy / Repeater / Intruder</span>
+            <span class="sec-badge sec-badge--done">✓ Mastered</span>
+          </div>
         </div>
       </div>
 
       <!-- Lab list -->
       <div class="labs-panel fade-up">
         <div class="labs-panel-header">
-          <h3>📚 Recent PortSwigger Labs</h3>
-          <a href="https://portswigger.net/web-security" target="_blank" rel="noreferrer">Web Academy ↗</a>
+          <div>
+            <h3>📚 Verified PortSwigger Labs Breakdown</h3>
+            <span style="font-family:var(--mono);font-size:11px;color:var(--faint)">Documented Exploit Writeups &amp; Python PoCs</span>
+          </div>
+          <a href="https://portswigger.net/web-security" target="_blank" rel="noreferrer" class="lab-link-btn">Academy Portal ↗</a>
         </div>
         <ul>
           <li class="lab-row">
@@ -500,7 +528,13 @@
           </li>
           <li class="lab-row">
             <span class="lab-dot lab-dot--done"></span>
-            <span class="lab-name">Username enumeration via different responses</span>
+            <span class="lab-name">SQL injection UNION attack, determining the number of columns returned</span>
+            <span class="lab-cat">SQLi</span>
+            <span class="lab-diff lab-diff--a">Apprentice</span>
+          </li>
+          <li class="lab-row">
+            <span class="lab-dot lab-dot--done"></span>
+            <span class="lab-name">Username enumeration via different responses (Automated via Python &amp; Intruder)</span>
             <span class="lab-cat">Auth</span>
             <span class="lab-diff lab-diff--a">Apprentice</span>
           </li>
@@ -518,13 +552,13 @@
           </li>
           <li class="lab-row">
             <span class="lab-dot lab-dot--todo"></span>
-            <span class="lab-name">Blind SQL injection with conditional responses</span>
+            <span class="lab-name">Blind SQL injection with conditional responses and time-based extraction</span>
             <span class="lab-cat">SQLi</span>
             <span class="lab-diff lab-diff--p">Practitioner</span>
           </li>
           <li class="lab-row">
             <span class="lab-dot lab-dot--todo"></span>
-            <span class="lab-name">SSRF with blacklist-based input filter</span>
+            <span class="lab-name">SSRF with blacklist-based input filter &amp; IP obfuscation</span>
             <span class="lab-cat">SSRF</span>
             <span class="lab-diff lab-diff--p">Practitioner</span>
           </li>
@@ -532,47 +566,134 @@
       </div>
     </section>
 
-    <!-- ════════ 04 · ABOUT ════════ -->
-    <section id="about" class="section section--about">
+    <!-- ════════ 03 · DEFENSE MATRIX (SKILLS) ════════ -->
+    <section id="skills" class="section section--skills">
       <div class="section-eyebrow fade-up">
-        <span class="section-n">04</span>
+        <span class="section-n">03 // DEFENSE MATRIX</span>
         <div class="section-rule"></div>
       </div>
-      <h2 class="section-title fade-up">My Story</h2>
+      <h2 class="section-title fade-up">Security Tooling &amp; DevSecOps Matrix</h2>
+      <p class="section-sub fade-up">Offensive exploit tooling, security automation &amp; defensive standards</p>
+
+      <div class="skills-layout" style="margin-top:56px">
+        <div class="skills-col">
+          <div class="fade-up">
+            <h3 class="skill-group-title"><span class="matrix-tag">OFFENSIVE</span> Penetration Testing Arsenal</h3>
+            <ul class="skill-list">
+              <li class="skill-item"><span class="skill-name">Burp Suite Professional</span><div class="skill-bar"><div class="skill-fill" style="--w:90%"></div></div><span class="skill-pct">90%</span></li>
+              <li class="skill-item"><span class="skill-name">OWASP ZAP</span><div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div><span class="skill-pct">80%</span></li>
+              <li class="skill-item"><span class="skill-name">Nmap &amp; Reconnaissance</span><div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div><span class="skill-pct">85%</span></li>
+              <li class="skill-item"><span class="skill-name">Wireshark Traffic Analysis</span><div class="skill-bar"><div class="skill-fill" style="--w:75%"></div></div><span class="skill-pct">75%</span></li>
+              <li class="skill-item"><span class="skill-name">SQLmap &amp; ffuf / Gobuster</span><div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div><span class="skill-pct">80%</span></li>
+            </ul>
+          </div>
+          <div class="fade-up">
+            <h3 class="skill-group-title"><span class="matrix-tag">STANDARDS</span> Security &amp; Vulnerability Knowledge</h3>
+            <ul class="skill-list">
+              <li class="skill-item"><span class="skill-name">OWASP Top 10 Web Vulnerabilities</span><div class="skill-bar"><div class="skill-fill" style="--w:92%"></div></div><span class="skill-pct">92%</span></li>
+              <li class="skill-item"><span class="skill-name">OWASP API Security Top 10</span><div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div><span class="skill-pct">85%</span></li>
+              <li class="skill-item"><span class="skill-name">CWE / SANS Top 25</span><div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div><span class="skill-pct">80%</span></li>
+              <li class="skill-item"><span class="skill-name">CVSS v3.1 Severity Scoring</span><div class="skill-bar"><div class="skill-fill" style="--w:88%"></div></div><span class="skill-pct">88%</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="skills-col">
+          <div class="fade-up">
+            <h3 class="skill-group-title"><span class="matrix-tag">AUTOMATION</span> DevSecOps &amp; Security QA</h3>
+            <ul class="skill-list">
+              <li class="skill-item"><span class="skill-name">Playwright (Security Fuzzing)</span><div class="skill-bar"><div class="skill-fill" style="--w:95%"></div></div><span class="skill-pct">95%</span></li>
+              <li class="skill-item"><span class="skill-name">REST Assured (API Sec Tests)</span><div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div><span class="skill-pct">85%</span></li>
+              <li class="skill-item"><span class="skill-name">GitHub Actions (CI/CD Security)</span><div class="skill-bar"><div class="skill-fill" style="--w:88%"></div></div><span class="skill-pct">88%</span></li>
+              <li class="skill-item"><span class="skill-name">Docker Container Hardening</span><div class="skill-bar"><div class="skill-fill" style="--w:70%"></div></div><span class="skill-pct">70%</span></li>
+            </ul>
+          </div>
+          <div class="fade-up">
+            <h3 class="skill-group-title"><span class="matrix-tag">ECOSYSTEM</span> Languages &amp; Tooling</h3>
+            <div class="tools-grid">
+              <span class="tool-chip tool-chip--sec">Python (Exploits)</span>
+              <span class="tool-chip tool-chip--sec">Burp Suite Pro</span>
+              <span class="tool-chip tool-chip--sec">Bash Scripting</span>
+              <span class="tool-chip">TypeScript</span>
+              <span class="tool-chip">JavaScript</span>
+              <span class="tool-chip">Java</span>
+              <span class="tool-chip">SQL</span>
+              <span class="tool-chip">Postman API</span>
+              <span class="tool-chip">Git / GitHub</span>
+              <span class="tool-chip">Allure Reports</span>
+              <span class="tool-chip">Linux CLI</span>
+              <span class="tool-chip">VS Code</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════ 04 · PHILOSOPHY & METHODOLOGY ════════ -->
+    <section id="about" class="section section--about">
+      <div class="section-eyebrow fade-up">
+        <span class="section-n">04 // METHODOLOGY &amp; PHILOSOPHY</span>
+        <div class="section-rule"></div>
+      </div>
+      <h2 class="section-title fade-up">Offensive Mindset, Defensive Architecture</h2>
+      <p class="section-sub fade-up">How I approach web penetration testing, threat modeling, and DevSecOps</p>
 
       <div class="about-layout" style="margin-top:56px">
         <div class="about-photo fade-up">
           <img src="https://avatars.githubusercontent.com/u/227957722?v=4" alt="Md Sozibul Islam (Sadhin)" width="320" height="426" loading="lazy" />
           <div class="about-photo-overlay"></div>
-          <div class="about-photo-caption">Md Sozibul Islam · Dhaka, BD</div>
+          <div class="about-photo-caption"><span class="terminal-prefix">&gt;</span> SEC-ENG // DHAKA, BANGLADESH</div>
         </div>
 
         <div class="about-text fade-up">
-          <p class="about-lead">I'm a <em>quality-obsessed</em> engineer who believes software should work exactly as it should — every single time.</p>
-          <p>Currently working as an Associate SQA Engineer &amp; SDET at <strong>Innovate Solution</strong>, I specialize in building robust, scalable test automation frameworks with Playwright and TypeScript.</p>
-          <p>My QA journey started with manual testing, but I quickly fell in love with automation — the satisfaction of watching hundreds of test cases run green in minutes never gets old.</p>
-          <p>Beyond work, I'm studying offensive web security through PortSwigger Web Academy, learning to think like an attacker to write better defensive tests.</p>
+          <p class="about-lead">I believe <em>defense without offense is just guesswork</em>. To defend web applications against sophisticated adversaries, you have to dissect how they exploit them.</p>
+          <p>Working as an Associate SQA &amp; Application Security Engineer at <strong>Innovate Solution</strong>, I combine rigorous test automation frameworks (Playwright, REST Assured) with offensive penetration testing (Burp Suite Pro, OWASP Top 10, PortSwigger Web Security Academy).</p>
+          <p>My daily focus is turning discovered vulnerabilities into deterministic, automated regression tests so security flaws can never resurface in production CI/CD pipelines.</p>
+
+          <!-- 4-Stage Attack & Defense Lifecycle -->
+          <div class="sec-lifecycle-grid" style="margin-top:32px">
+            <div class="sec-phase-card">
+              <span class="phase-step">PHASE 01</span>
+              <h4>Reconnaissance &amp; Mapping</h4>
+              <p>Passive/active intelligence, endpoint discovery, sub-domain profiling, and technology fingerprinting.</p>
+            </div>
+            <div class="sec-phase-card">
+              <span class="phase-step">PHASE 02</span>
+              <h4>Threat Modeling &amp; Sinks</h4>
+              <p>Analyzing data flows, trust boundaries, user roles, authentication schemes, and unvalidated input sinks.</p>
+            </div>
+            <div class="sec-phase-card">
+              <span class="phase-step">PHASE 03</span>
+              <h4>Exploitation &amp; PoC</h4>
+              <p>Manual payload crafting with Burp Suite Repeater/Intruder to establish reproducible Proof of Concepts.</p>
+            </div>
+            <div class="sec-phase-card">
+              <span class="phase-step">PHASE 04</span>
+              <h4>Automated DevSecOps Gate</h4>
+              <p>Writing Playwright/API automated regression checks to block regressions in CI/CD before release.</p>
+            </div>
+          </div>
 
           <div class="about-values" style="margin-top:32px">
             <div class="value-item">
-              <span class="value-icon">⚡</span>
+              <span class="value-icon">🛡️</span>
               <div>
-                <strong>Speed without compromise</strong>
-                <p>Fast feedback loops through parallel execution and smart CI integration.</p>
+                <strong>Shift-Left Security</strong>
+                <p>Catching vulnerabilities in sprint testing and PR stages before they reach customer-facing production.</p>
               </div>
             </div>
             <div class="value-item">
               <span class="value-icon">🎯</span>
               <div>
-                <strong>Precision over coverage</strong>
-                <p>Well-targeted tests that catch real bugs, not just inflate numbers.</p>
+                <strong>Zero False-Positive Pragmatism</strong>
+                <p>Every security issue is substantiated with a verified exploit payload, impact analysis, and remediation steps.</p>
               </div>
             </div>
             <div class="value-item">
-              <span class="value-icon">🔒</span>
+              <span class="value-icon">⚡</span>
               <div>
-                <strong>Security-aware QA</strong>
-                <p>Integrating security thinking into every test automation strategy.</p>
+                <strong>Automated Regression Shield</strong>
+                <p>Turning manual pen-test findings into continuous automated regression tests in GitHub Actions pipelines.</p>
               </div>
             </div>
           </div>
@@ -580,17 +701,18 @@
       </div>
     </section>
 
-    <!-- ════════ 05 · CONTACT ════════ -->
+    <!-- ════════ 05 · ENCRYPTED COMMS & CONNECT ════════ -->
     <section id="contact" class="section section--contact">
       <div class="section-eyebrow fade-up">
-        <span class="section-n">05</span>
+        <span class="section-n">05 // SECURE TRANSMISSION</span>
         <div class="section-rule"></div>
       </div>
-      <h2 class="section-title fade-up">Say Hello.</h2>
+      <h2 class="section-title fade-up">Initialize Comms.</h2>
+      <p class="section-sub fade-up">Open to AppSec, Web Penetration Testing, and DevSecOps engineering roles</p>
 
       <div class="contact-layout" style="margin-top:56px">
         <div class="fade-up">
-          <p class="contact-lead">Whether you have a role in mind, a project to automate, or just want to talk QA &amp; security — my inbox is always open.</p>
+          <p class="contact-lead">Whether you are auditing high-risk web applications, establishing automated DevSecOps pipelines, or seeking an AppSec engineer with offensive acumen — let's connect.</p>
           <div class="contact-links">
             <a href="mailto:sozibul23@gmail.com" class="contact-link">
               <span class="contact-link-ico">✉</span>
@@ -616,16 +738,17 @@
           <div class="contact-card-top">
             <div class="contact-card-status">
               <span class="status-dot"></span>
-              Currently employed
+              SEC-OPS OPERATIONAL
             </div>
-            <div class="contact-card-role">Associate SQA Engineer &amp; SDET</div>
+            <div class="contact-card-role">Application Security &amp; SQA Engineer</div>
             <div class="contact-card-org">Innovate Solution</div>
           </div>
           <div class="contact-card-bottom">
             <div class="contact-card-loc">
               📍 Dhaka, Bangladesh<br/>
               🕐 UTC+6 (Bangladesh Standard Time)<br/>
-              🌐 Open to remote opportunities
+              🛡️ Target Certs: eJPT · BSCP · OSCP<br/>
+              🌐 Available for AppSec &amp; Pen-Testing Engagements
             </div>
           </div>
         </div>
