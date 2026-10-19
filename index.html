@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Md Sozibul Islam — SQA Engineer, SDET &amp; Cyber Security</title>
+  <meta name="description" content="Associate SQA Engineer, SDET &amp; Cyber Security Researcher at Innovate Solution. Automating E2E &amp; APIs with Playwright, REST Assured &amp; PortSwigger Web Security. Based in Dhaka, Bangladesh." />
+  <meta property="og:title" content="Md Sozibul Islam — SQA Engineer, SDET &amp; Cyber Security" />
+  <meta property="og:description" content="Associate SQA Engineer, SDET &amp; Cyber Security Researcher. E2E &amp; API Automation, PortSwigger Web Security. Based in Dhaka, Bangladesh." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── TOP BAR ───────────────────────────────── -->
+  <div class="top-bar" id="topBar">
+    <span class="top-logo"><em>MSI</em> / sozibul23 <span class="top-badge-sec">QA · Security</span></span>
+    <span class="top-light-caption">THE LIGHT FOLLOWS YOUR CURSOR</span>
+    <div class="top-pill-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span class="theme-icon">◐</span>
+      </button>
+      <div class="pill-divider"></div>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="site-menu">
+        <span class="menu-toggle-label">MENU</span>
+        <span class="menu-plus">+</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ── SIDE MENU ─────────────────────────────── -->
+  <div id="site-menu" class="side-menu" role="dialog" aria-modal="true" aria-label="Navigation" aria-hidden="true">
+    <div class="menu-scrim" id="menuScrim"></div>
+    <div class="menu-sheet">
+      <div class="menu-sheet-top">
+        <span class="menu-sheet-label">Index</span>
+        <button class="menu-close" id="menuClose" aria-label="Close menu">✕</button>
+      </div>
+      <nav class="menu-nav" aria-label="Sections">
+        <ul class="menu-list">
+          <li><a href="#hero"     class="menu-item"><em>00</em><span class="menu-item-label">Intro</span><span class="menu-item-arrow">→</span></a></li>
+          <li><a href="#work"     class="menu-item"><em>01</em><span class="menu-item-label">Work</span><span class="menu-item-arrow">→</span></a></li>
+          <li><a href="#skills"   class="menu-item"><em>02</em><span class="menu-item-label">Skills</span><span class="menu-item-arrow">→</span></a></li>
+          <li><a href="#security" class="menu-item"><em>03</em><span class="menu-item-label">Security</span><span class="menu-item-arrow">→</span></a></li>
+          <li><a href="#about"    class="menu-item"><em>04</em><span class="menu-item-label">Story</span><span class="menu-item-arrow">→</span></a></li>
+          <li><a href="#contact"  class="menu-item"><em>05</em><span class="menu-item-label">Contact</span><span class="menu-item-arrow">→</span></a></li>
+        </ul>
+      </nav>
+      <div class="menu-foot">
+        <a href="mailto:sozibul23@gmail.com">Email ↗</a>
+        <a href="https://github.com/sozibul23" target="_blank" rel="noreferrer noopener">GitHub ↗</a>
+        <span style="margin-left:auto">©2026</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CURSOR SPOTLIGHT (The light follows your cursor) ── -->
+  <div class="cursor-spotlight" id="cursorSpotlight" aria-hidden="true"></div>
+
+  <!-- ── RIGHT SIDE VERTICAL RAIL NAVIGATION ─────── -->
+  <nav class="side-rail" id="sideRail" aria-label="Sections">
+    <div class="rail-item active" data-section="hero">
+      <button class="rail-btn" data-target="hero">
+        <span class="rail-n">00</span>
+        <span class="rail-label">INTRO</span>
+      </button>
+    </div>
+    <div class="rail-item" data-section="work">
+      <button class="rail-btn" data-target="work">
+        <span class="rail-n">01</span>
+        <span class="rail-label">WORK</span>
+      </button>
+    </div>
+    <div class="rail-item" data-section="skills">
+      <button class="rail-btn" data-target="skills">
+        <span class="rail-n">02</span>
+        <span class="rail-label">SKILLS</span>
+      </button>
+    </div>
+    <div class="rail-item" data-section="security">
+      <button class="rail-btn" data-target="security">
+        <span class="rail-n">03</span>
+        <span class="rail-label">SECURITY</span>
+      </button>
+    </div>
+    <div class="rail-item" data-section="about">
+      <button class="rail-btn" data-target="about">
+        <span class="rail-n">04</span>
+        <span class="rail-label">STORY</span>
+      </button>
+    </div>
+    <div class="rail-item" data-section="contact">
+      <button class="rail-btn" data-target="contact">
+        <span class="rail-n">05</span>
+        <span class="rail-label">CONTACT</span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="main">
+
+    <!-- ════════ 00 · HERO ════════ -->
+    <section id="hero" class="section section--hero">
+      <!-- Background Ambient Glows & Interactive Canvas -->
+      <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+      <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+      <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+
+      <!-- HERO TOP DECK (Say Hello + NOW status + Portrait) -->
+      <div class="hero-deck">
+        <!-- Floating Say Hello angled badge -->
+        <a href="mailto:sozibul23@gmail.com" class="say-hello-badge" aria-label="Say hello">
+          <span>Say hello ↗</span>
+        </a>
+
+        <!-- NOW status widget with commits & cyber security info -->
+        <div class="now-status-card">
+          <div class="now-header">
+            <span class="now-pulse-dot"></span>
+            <span class="now-tag">NOW</span>
+          </div>
+          <div class="now-headline">Automating E2E &amp; Web Pentesting <span class="now-arrow">↓</span></div>
+          <div class="now-sub">Associate SQA &amp; SDET · PortSwigger Web Security Academy</div>
+          <div class="now-activity">
+            <span class="commit-tile active"></span>
+            <span class="commit-tile active"></span>
+            <span class="commit-tile active"></span>
+            <span class="commit-tile active"></span>
+            <span class="commit-tile active"></span>
+            <span class="commit-tile active"></span>
+            <span class="commit-tile active"></span>
+            <span class="commit-tile active"></span>
+            <span class="commit-tile active"></span>
+            <span class="commit-tile current"></span>
+            <span class="commit-tile"></span>
+            <span class="commit-meta">ACTIVE LEARNER &amp; CONTRIBUTOR</span>
+          </div>
+        </div>
+
+        <!-- Halftone / Cyber Security Avatar Portrait Card -->
+        <div class="hero-portrait-card">
+          <div class="portrait-crop portrait-crop--tl">┌</div>
+          <div class="portrait-crop portrait-crop--tr">┐</div>
+          <div class="portrait-crop portrait-crop--bl">└</div>
+          <div class="portrait-crop portrait-crop--br">┘</div>
+          <div class="portrait-inner">
+            <div class="portrait-halftone-art">
+              <div class="halftone-cyber-overlay">
+                <span class="cyber-scanline"></span>
+                <div class="cyber-shield-large">🛡️</div>
+                <div class="portrait-caption">MD SOZIBUL ISLAM</div>
+                <div class="portrait-role-tag">SQA · SDET · CYBER SECURITY</div>
+              </div>
+            </div>
+            <div class="portrait-tape"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HERO GIGANTIC TYPOGRAPHY -->
+      <div class="hero-typography-block">
+        <div class="hero-eyebrow-line">
+          ASSOCIATE SQA ENGINEER &amp; SDET — CYBER SECURITY ANALYST — BASED IN DHAKA, BANGLADESH
+        </div>
+        <h1 class="hero-giant-name">
+          <span class="hero-first-line">Md Sozibul</span>
+          <span class="hero-giant-block">ISLAM</span>
+        </h1>
+      </div>
+
+      <!-- HERO BOTTOM (Typewriter, Bio & Actions) -->
+      <div class="hero-bottom">
+        <div class="hero-desc">
+          <div class="hero-role-badge">
+            <span class="role-pill">SQA Engineer</span>
+            <span class="role-pill-sep">/</span>
+            <span class="role-pill">SDET</span>
+            <span class="role-pill-sep">/</span>
+            <span class="role-pill role-pill--sec"><span class="sec-dot"></span> Cyber Security</span>
+          </div>
+
+          <div class="hero-typewriter-box">
+            <span class="typewriter-prefix">&gt; </span>
+            <span id="typewriter" class="typewriter-text"></span>
+            <span class="typewriter-cursor">_</span>
+          </div>
+
+          <p class="hero-role">Associate SQA Engineer, SDET &amp; Cyber Security Analyst · <a href="https://github.com/sozibul23" target="_blank" rel="noreferrer">Innovate Solution</a></p>
+          <p style="margin-top:8px">Building quality-first software through intelligent test automation &amp; web application security testing. Crafting enterprise E2E frameworks and actively mastering offensive security through PortSwigger Academy.</p>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn--primary" href="#work">View Work <span class="btn-arrow">↗</span></a>
+          <a class="btn btn--cyber" href="#security"><span class="btn-sec-icon">🛡️</span> Security Labs</a>
+          <a class="btn btn--ghost" href="https://github.com/sozibul23" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-n" data-count="2" data-suffix="+">2+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat">
+          <span class="stat-n" data-count="500" data-suffix="+">500+</span>
+          <span class="stat-label">Test Cases Written</span>
+        </div>
+        <div class="stat">
+          <span class="stat-n" data-count="18" data-suffix="+">18+</span>
+          <span class="stat-label">Security Labs Solved</span>
+        </div>
+        <div class="stat">
+          <span class="stat-n" data-count="10" data-suffix="+">10+</span>
+          <span class="stat-label">Projects Automated</span>
+        </div>
+        <div class="stat">
+          <span class="stat-n" data-count="3" data-suffix="">3</span>
+          <span class="stat-label">Frameworks Mastered</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── INFINITE MARQUEE ──────────────────────── -->
+    <div class="marquee-strip" aria-hidden="true">
+      <div class="marquee-track">
+        <span class="marquee-item"><span class="m-icon">🎭</span> Playwright E2E</span>
+        <span class="marquee-item"><span class="m-icon">🛡️</span> Cyber Security &amp; AppSec</span>
+        <span class="marquee-item"><span class="m-icon">⚡</span> REST Assured API</span>
+        <span class="marquee-item"><span class="m-icon">🔍</span> Burp Suite Professional</span>
+        <span class="marquee-item"><span class="m-icon">🧪</span> Selenium WebDriver</span>
+        <span class="marquee-item"><span class="m-icon">🔐</span> OWASP Top 10</span>
+        <span class="marquee-item"><span class="m-icon">🚀</span> CI/CD GitHub Actions</span>
+        <span class="marquee-item"><span class="m-icon">🌐</span> PortSwigger Web Academy</span>
+        <span class="marquee-item"><span class="m-icon">💉</span> SQL Injection &amp; XSS Defense</span>
+        <span class="marquee-item"><span class="m-icon">🐍</span> Python Automation</span>
+        <span class="marquee-item"><span class="m-icon">📊</span> Allure Reporting</span>
+        <span class="marquee-item"><span class="m-icon">📦</span> Docker Containers</span>
+        <span class="marquee-item"><span class="m-icon">📡</span> Postman API</span>
+        <!-- Seamless duplicate loop -->
+        <span class="marquee-item"><span class="m-icon">🎭</span> Playwright E2E</span>
+        <span class="marquee-item"><span class="m-icon">🛡️</span> Cyber Security &amp; AppSec</span>
+        <span class="marquee-item"><span class="m-icon">⚡</span> REST Assured API</span>
+        <span class="marquee-item"><span class="m-icon">🔍</span> Burp Suite Professional</span>
+        <span class="marquee-item"><span class="m-icon">🧪</span> Selenium WebDriver</span>
+        <span class="marquee-item"><span class="m-icon">🔐</span> OWASP Top 10</span>
+        <span class="marquee-item"><span class="m-icon">🚀</span> CI/CD GitHub Actions</span>
+        <span class="marquee-item"><span class="m-icon">🌐</span> PortSwigger Web Academy</span>
+        <span class="marquee-item"><span class="m-icon">💉</span> SQL Injection &amp; XSS Defense</span>
+        <span class="marquee-item"><span class="m-icon">🐍</span> Python Automation</span>
+        <span class="marquee-item"><span class="m-icon">📊</span> Allure Reporting</span>
+        <span class="marquee-item"><span class="m-icon">📦</span> Docker Containers</span>
+        <span class="marquee-item"><span class="m-icon">📡</span> Postman API</span>
+      </div>
+    </div>
+
+    <!-- ════════ 01 · WORK ════════ -->
+    <section id="work" class="section section--work">
+      <div class="section-eyebrow fade-up">
+        <span class="section-n">01</span>
+        <div class="section-rule"></div>
+      </div>
+      <h2 class="section-title fade-up">Selected Work</h2>
+      <p class="section-sub fade-up">Automation frameworks &amp; QA projects</p>
+
+      <!-- Featured -->
+      <div style="margin-top:48px; margin-bottom:2px">
+        <a href="https://github.com/sozibul23/playwright-travel-portal-automation" target="_blank" rel="noreferrer" class="featured-card fade-up" style="display:block">
+          <div class="featured-card-body">
+            <div class="featured-badge">⭐ Featured Project</div>
+            <h3 class="featured-title">Travel Portal Automation</h3>
+            <p class="featured-desc">Enterprise-grade E2E QA automation framework for B2B &amp; B2C travel portals. Covers Flights, Hotels, Multi-Suppliers &amp; Dynamic Coupons with parallel execution and full Allure reporting pipeline.</p>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <span class="tag">Playwright</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Allure</span>
+              <span class="tag">Page Object</span>
+              <span class="tag">CI/CD</span>
+            </div>
+          </div>
+          <div class="featured-footer">
+            <div class="featured-tags">
+              <span style="font-family:var(--mono);font-size:11px;color:var(--faint)">JavaScript · 3.8MB · 2026</span>
+            </div>
+            <span class="featured-link">View on GitHub <span>↗</span></span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Project list -->
+      <div class="projects-list">
+        <a href="https://github.com/sozibul23/rokomari-playwright-automation" target="_blank" rel="noreferrer" class="project-row">
+          <span class="project-index">02</span>
+          <div class="project-info">
+            <span class="project-title">Rokomari E2E Automation</span>
+            <div class="project-meta">
+              <span class="tag">Playwright</span><span class="tag">TypeScript</span><span class="tag">POM</span><span class="tag">Data-Driven</span>
+            </div>
+          </div>
+          <span class="project-arrow">↗</span>
+        </a>
+
+        <a href="https://github.com/sozibul23/parabank_automation" target="_blank" rel="noreferrer" class="project-row">
+          <span class="project-index">03</span>
+          <div class="project-info">
+            <span class="project-title">ParaBank Online Banking Automation</span>
+            <div class="project-meta">
+              <span class="tag">Playwright</span><span class="tag">TypeScript</span><span class="tag">Banking</span>
+            </div>
+          </div>
+          <span class="project-arrow">↗</span>
+        </a>
+
+        <a href="https://github.com/sozibul23/billetix-automation" target="_blank" rel="noreferrer" class="project-row">
+          <span class="project-index">04</span>
+          <div class="project-info">
+            <span class="project-title">Billetix Ticket Platform Automation</span>
+            <div class="project-meta">
+              <span class="tag">Playwright</span><span class="tag">TypeScript</span><span class="tag">E2E</span>
+            </div>
+          </div>
+          <span class="project-arrow">↗</span>
+        </a>
+
+        <a href="https://github.com/sozibul23/b2c-sqa-test-cases-suite" target="_blank" rel="noreferrer" class="project-row">
+          <span class="project-index">05</span>
+          <div class="project-info">
+            <span class="project-title">B2C SQA Test Cases Suite</span>
+            <div class="project-meta">
+              <span class="tag">SQA</span><span class="tag">Test Cases</span><span class="tag">OTA</span><span class="tag">Classifieds</span>
+            </div>
+          </div>
+          <span class="project-arrow">↗</span>
+        </a>
+
+        <a href="https://github.com/sozibul23" target="_blank" rel="noreferrer" class="project-row">
+          <span class="project-index">+</span>
+          <div class="project-info">
+            <span class="project-title" style="color:var(--muted)">More on GitHub →</span>
+            <div class="project-meta"><span class="tag">All Repositories</span></div>
+          </div>
+          <span class="project-arrow">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ════════ 02 · SKILLS ════════ -->
+    <section id="skills" class="section section--skills">
+      <div class="section-eyebrow fade-up">
+        <span class="section-n">02</span>
+        <div class="section-rule"></div>
+      </div>
+      <h2 class="section-title fade-up">Skills &amp; Tools</h2>
+      <p class="section-sub fade-up">Technologies I work with every day</p>
+
+      <div class="skills-layout" style="margin-top:56px">
+        <div class="skills-col">
+          <div class="fade-up">
+            <h3 class="skill-group-title">Test Automation</h3>
+            <ul class="skill-list">
+              <li class="skill-item"><span class="skill-name">Playwright</span><div class="skill-bar"><div class="skill-fill" style="--w:95%"></div></div><span class="skill-pct">95%</span></li>
+              <li class="skill-item"><span class="skill-name">Selenium WebDriver</span><div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div><span class="skill-pct">85%</span></li>
+              <li class="skill-item"><span class="skill-name">REST Assured</span><div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div><span class="skill-pct">80%</span></li>
+              <li class="skill-item"><span class="skill-name">JMeter</span><div class="skill-bar"><div class="skill-fill" style="--w:70%"></div></div><span class="skill-pct">70%</span></li>
+            </ul>
+          </div>
+          <div class="fade-up">
+            <h3 class="skill-group-title">Languages</h3>
+            <ul class="skill-list">
+              <li class="skill-item"><span class="skill-name">TypeScript</span><div class="skill-bar"><div class="skill-fill" style="--w:90%"></div></div><span class="skill-pct">90%</span></li>
+              <li class="skill-item"><span class="skill-name">JavaScript</span><div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div><span class="skill-pct">85%</span></li>
+              <li class="skill-item"><span class="skill-name">Java</span><div class="skill-bar"><div class="skill-fill" style="--w:75%"></div></div><span class="skill-pct">75%</span></li>
+              <li class="skill-item"><span class="skill-name">Python</span><div class="skill-bar"><div class="skill-fill" style="--w:60%"></div></div><span class="skill-pct">60%</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="skills-col">
+          <div class="fade-up">
+            <h3 class="skill-group-title">CI/CD &amp; DevOps</h3>
+            <ul class="skill-list">
+              <li class="skill-item"><span class="skill-name">GitHub Actions</span><div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div><span class="skill-pct">85%</span></li>
+              <li class="skill-item"><span class="skill-name">Jenkins</span><div class="skill-bar"><div class="skill-fill" style="--w:75%"></div></div><span class="skill-pct">75%</span></li>
+              <li class="skill-item"><span class="skill-name">Docker</span><div class="skill-bar"><div class="skill-fill" style="--w:65%"></div></div><span class="skill-pct">65%</span></li>
+            </ul>
+          </div>
+          <div class="fade-up">
+            <h3 class="skill-group-title">Tools &amp; Ecosystem</h3>
+            <div class="tools-grid">
+              <span class="tool-chip">Allure Report</span>
+              <span class="tool-chip">Jira</span>
+              <span class="tool-chip">Postman</span>
+              <span class="tool-chip">Burp Suite</span>
+              <span class="tool-chip">Git</span>
+              <span class="tool-chip">VS Code</span>
+              <span class="tool-chip">IntelliJ</span>
+              <span class="tool-chip">TestNG</span>
+              <span class="tool-chip">Mocha</span>
+              <span class="tool-chip">Cucumber</span>
+              <span class="tool-chip">Swagger</span>
+              <span class="tool-chip">Azure DevOps</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════ 03 · SECURITY ════════ -->
+    <section id="security" class="section section--security">
+      <div class="section-eyebrow fade-up">
+        <span class="section-n">03</span>
+        <div class="section-rule"></div>
+      </div>
+      <h2 class="section-title fade-up">Cybersecurity</h2>
+      <p class="section-sub fade-up">Web security learning &amp; offensive security research</p>
+
+      <div class="security-banner fade-up" style="margin-top:48px">
+        <div class="sec-icon">🔐</div>
+        <div>
+          <div class="sec-title">Web Security &amp; Penetration Testing</div>
+          <p class="sec-text">Alongside QA automation, I actively study offensive web security through <strong>PortSwigger Web Security Academy</strong>. Understanding how attackers think makes me a sharper tester — I integrate security mindset into every automation framework I build, writing tests that actively probe for vulnerabilities.</p>
+        </div>
+      </div>
+
+      <!-- PortSwigger progress -->
+      <div class="ps-progress-wrap fade-up">
+        <div class="ps-progress-header">
+          <span class="ps-progress-label">PortSwigger Web Academy Progress</span>
+          <span class="ps-progress-status">Active Learner</span>
+        </div>
+        <div class="ps-progress-track">
+          <div class="ps-progress-fill" data-width="45%"></div>
+        </div>
+        <div class="ps-progress-foot">
+          <span>Completed labs across multiple vulnerability classes</span>
+          <span>~45% complete</span>
+        </div>
+      </div>
+
+      <!-- Vulnerability cards -->
+      <div class="security-grid">
+        <div class="security-card">
+          <div class="sec-card-icon">💉</div>
+          <h4>SQL Injection</h4>
+          <p>Authentication bypass, UNION attacks, blind SQLi, time-based extraction and out-of-band data exfiltration techniques.</p>
+          <span class="sec-badge sec-badge--prog">● In Progress</span>
+        </div>
+        <div class="security-card">
+          <div class="sec-card-icon">🌐</div>
+          <h4>Cross-Site Scripting</h4>
+          <p>Reflected, stored, and DOM-based XSS. Filter bypasses, WAF evasion, and exploit delivery chains.</p>
+          <span class="sec-badge sec-badge--prog">● In Progress</span>
+        </div>
+        <div class="security-card">
+          <div class="sec-card-icon">🔑</div>
+          <h4>Authentication Attacks</h4>
+          <p>Brute-force, credential stuffing, broken auth logic, MFA bypass and session management vulnerabilities.</p>
+          <span class="sec-badge sec-badge--done">✓ Completed</span>
+        </div>
+        <div class="security-card">
+          <div class="sec-card-icon">🕵️</div>
+          <h4>Burp Suite Pro</h4>
+          <p>Active scanning, Intruder automation, Repeater analysis, custom extension usage and intercepting proxies.</p>
+          <span class="sec-badge sec-badge--done">✓ Completed</span>
+        </div>
+        <div class="security-card">
+          <div class="sec-card-icon">🗺️</div>
+          <h4>IDOR &amp; Access Control</h4>
+          <p>Insecure direct object references, horizontal &amp; vertical privilege escalation, CORS misconfigurations.</p>
+          <span class="sec-badge sec-badge--learn">⟳ Learning</span>
+        </div>
+        <div class="security-card">
+          <div class="sec-card-icon">📡</div>
+          <h4>SSRF &amp; XXE</h4>
+          <p>Server-side request forgery for internal network pivoting, XML external entity injection attack vectors.</p>
+          <span class="sec-badge sec-badge--learn">⟳ Learning</span>
+        </div>
+      </div>
+
+      <!-- Lab list -->
+      <div class="labs-panel fade-up">
+        <div class="labs-panel-header">
+          <h3>📚 Recent PortSwigger Labs</h3>
+          <a href="https://portswigger.net/web-security" target="_blank" rel="noreferrer">Web Academy ↗</a>
+        </div>
+        <ul>
+          <li class="lab-row">
+            <span class="lab-dot lab-dot--done"></span>
+            <span class="lab-name">SQL injection vulnerability in WHERE clause allowing retrieval of hidden data</span>
+            <span class="lab-cat">SQLi</span>
+            <span class="lab-diff lab-diff--a">Apprentice</span>
+          </li>
+          <li class="lab-row">
+            <span class="lab-dot lab-dot--done"></span>
+            <span class="lab-name">SQL injection with filter bypass via XML encoding</span>
+            <span class="lab-cat">SQLi</span>
+            <span class="lab-diff lab-diff--p">Practitioner</span>
+          </li>
+          <li class="lab-row">
+            <span class="lab-dot lab-dot--done"></span>
+            <span class="lab-name">Username enumeration via different responses</span>
+            <span class="lab-cat">Auth</span>
+            <span class="lab-diff lab-diff--a">Apprentice</span>
+          </li>
+          <li class="lab-row">
+            <span class="lab-dot lab-dot--done"></span>
+            <span class="lab-name">Reflected XSS into HTML context with nothing encoded</span>
+            <span class="lab-cat">XSS</span>
+            <span class="lab-diff lab-diff--a">Apprentice</span>
+          </li>
+          <li class="lab-row">
+            <span class="lab-dot lab-dot--prog"></span>
+            <span class="lab-name">DOM XSS in jQuery anchor href attribute sink using location.search source</span>
+            <span class="lab-cat">XSS</span>
+            <span class="lab-diff lab-diff--a">Apprentice</span>
+          </li>
+          <li class="lab-row">
+            <span class="lab-dot lab-dot--todo"></span>
+            <span class="lab-name">Blind SQL injection with conditional responses</span>
+            <span class="lab-cat">SQLi</span>
+            <span class="lab-diff lab-diff--p">Practitioner</span>
+          </li>
+          <li class="lab-row">
+            <span class="lab-dot lab-dot--todo"></span>
+            <span class="lab-name">SSRF with blacklist-based input filter</span>
+            <span class="lab-cat">SSRF</span>
+            <span class="lab-diff lab-diff--p">Practitioner</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ════════ 04 · ABOUT ════════ -->
+    <section id="about" class="section section--about">
+      <div class="section-eyebrow fade-up">
+        <span class="section-n">04</span>
+        <div class="section-rule"></div>
+      </div>
+      <h2 class="section-title fade-up">My Story</h2>
+
+      <div class="about-layout" style="margin-top:56px">
+        <div class="about-photo fade-up">
+          <img src="https://avatars.githubusercontent.com/u/227957722?v=4" alt="Md Sozibul Islam (Sadhin)" width="320" height="426" loading="lazy" />
+          <div class="about-photo-overlay"></div>
+          <div class="about-photo-caption">Md Sozibul Islam · Dhaka, BD</div>
+        </div>
+
+        <div class="about-text fade-up">
+          <p class="about-lead">I'm a <em>quality-obsessed</em> engineer who believes software should work exactly as it should — every single time.</p>
+          <p>Currently working as an Associate SQA Engineer &amp; SDET at <strong>Innovate Solution</strong>, I specialize in building robust, scalable test automation frameworks with Playwright and TypeScript.</p>
+          <p>My QA journey started with manual testing, but I quickly fell in love with automation — the satisfaction of watching hundreds of test cases run green in minutes never gets old.</p>
+          <p>Beyond work, I'm studying offensive web security through PortSwigger Web Academy, learning to think like an attacker to write better defensive tests.</p>
+
+          <div class="about-values" style="margin-top:32px">
+            <div class="value-item">
+              <span class="value-icon">⚡</span>
+              <div>
+                <strong>Speed without compromise</strong>
+                <p>Fast feedback loops through parallel execution and smart CI integration.</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <span class="value-icon">🎯</span>
+              <div>
+                <strong>Precision over coverage</strong>
+                <p>Well-targeted tests that catch real bugs, not just inflate numbers.</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <span class="value-icon">🔒</span>
+              <div>
+                <strong>Security-aware QA</strong>
+                <p>Integrating security thinking into every test automation strategy.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════ 05 · CONTACT ════════ -->
+    <section id="contact" class="section section--contact">
+      <div class="section-eyebrow fade-up">
+        <span class="section-n">05</span>
+        <div class="section-rule"></div>
+      </div>
+      <h2 class="section-title fade-up">Say Hello.</h2>
+
+      <div class="contact-layout" style="margin-top:56px">
+        <div class="fade-up">
+          <p class="contact-lead">Whether you have a role in mind, a project to automate, or just want to talk QA &amp; security — my inbox is always open.</p>
+          <div class="contact-links">
+            <a href="mailto:sozibul23@gmail.com" class="contact-link">
+              <span class="contact-link-ico">✉</span>
+              <span>sozibul23@gmail.com</span>
+              <span class="contact-link-arrow">↗</span>
+            </a>
+            <a href="https://github.com/sozibul23" target="_blank" rel="noreferrer" class="contact-link">
+              <span class="contact-link-ico">
+                <svg viewBox="0 0 16 16" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+              </span>
+              <span>github.com/sozibul23</span>
+              <span class="contact-link-arrow">↗</span>
+            </a>
+            <a href="https://www.linkedin.com/in/md-sozibul-islam/" target="_blank" rel="noreferrer" class="contact-link">
+              <span class="contact-link-ico" style="font-weight:800;font-size:12px">in</span>
+              <span>linkedin.com/in/md-sozibul-islam</span>
+              <span class="contact-link-arrow">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-card fade-up">
+          <div class="contact-card-top">
+            <div class="contact-card-status">
+              <span class="status-dot"></span>
+              Currently employed
+            </div>
+            <div class="contact-card-role">Associate SQA Engineer &amp; SDET</div>
+            <div class="contact-card-org">Innovate Solution</div>
+          </div>
+          <div class="contact-card-bottom">
+            <div class="contact-card-loc">
+              📍 Dhaka, Bangladesh<br/>
+              🕐 UTC+6 (Bangladesh Standard Time)<br/>
+              🌐 Open to remote opportunities
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-name">Md Sozibul Islam (Sadhin)</span>
+      <span class="footer-copy">©2026 — Built with HTML, CSS &amp; JS</span>
+      <div class="footer-links">
+        <a href="https://github.com/sozibul23" target="_blank" rel="noreferrer">GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/md-sozibul-islam/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
